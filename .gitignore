@@ -1,8 +1,15 @@
 *.aux
+*.bbl
+*.bit
+*.blg
+*.dvi
+*.glo
 *.idx
 *.ilg
 *.ind
+*.lof
 *.log
+*.lot
 *.out
 *.pdf
 *.synctex.gz
