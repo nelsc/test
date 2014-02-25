@@ -1,0 +1,24 @@
+\ifthenelse{\boolean{hidecpp}}
+{\let\cpp=\comment
+\let\endcpp=\endcomment
+\newcommand{\nocpp}[1]{#1}
+\newcommand{\yescpp}[1]{}
+}
+{\newenvironment{cpp}
+{\sffamily\slshape[C++:}
+{]}
+\newcommand{\nocpp}[1]{}
+\newcommand{\yescpp}[1]{#1}
+}
+%% Paragraph numbering
+\newcounter{Paras}
+\counterwithin{Paras}{clause}
+\counterwithin{Paras}{sclause}
+\counterwithin{Paras}{ssclause}
+\counterwithin{Paras}{sssclause}
+\counterwithin{Paras}{ssssclause}
+\counterwithin{Paras}{sssssclause}
+\makeatletter
+\def\pnum{\addtocounter{Paras}{1}\noindent\llap{{%
+  \scriptsize\raisebox{.7ex}{\arabic{Paras}}}\hspace{\@totalleftmargin}\quad}}
+\makeatother
